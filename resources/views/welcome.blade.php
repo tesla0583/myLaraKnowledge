@@ -81,7 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    @if(isset($name))
+                        Laravel for {{$name}}
+                    @else
+                        Laravel
+                    @endif
                 </div>
 
                 <div class="links">
@@ -93,6 +97,9 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+{{-- Use named route with global function route --}}
+{{--                    <a href="{{route('profile')}}">Named Route</a>--}}
+                    <a href="{{route('print.text')}}">Named Route</a>
                 </div>
             </div>
         </div>
